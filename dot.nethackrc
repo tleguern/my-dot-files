@@ -1,7 +1,11 @@
 OPTIONS=color, DECgraphics, showexp, showrace,
 OPTIONS=catname:Antoine, dogname:Fabien, horsename=Joe
-OPTIONS=autodig, !autopickup, lit_corridor, hilite_pet
+OPTIONS=autodig, autoquiver
+OPTIONS=lit_corridor, hilite_pet
+OPTIONS=autopickup
+OPTIONS=pickup_types:$?!/*
 OPTIONS=!cmdassist, extmenu, !prayconfirm, time, toptenwin
 name=Xin
 role=Samurai
-boulder=0
+OPTIONS=boulder:0
+
