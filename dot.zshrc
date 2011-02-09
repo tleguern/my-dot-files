@@ -15,12 +15,6 @@ alias naje='make'
 alias maek='make'
 alias nake='make'
 
-# Function
-ssh_marand_a()
-{
-    ssh $* le-gue_t@`ns_who -h marand_a | head -n 1 | cut -d '[' -f2 | sed s/"]"/""/`
-}
-
 # Keys
 bindkey "^[[7~" beginning-of-line
 bindkey "^[[8~" end-of-line
@@ -47,10 +41,12 @@ setopt MULTIBYTE
 setopt ALL_EXPORT
 setopt AUTO_CD
 
+zmodload zsh/net/tcp
 autoload zcalc
 autoload ztodo
 autoload -Uz tetris
 zle -N tetris
+autoload zed
 
 # The following lines were added by compinstall
 zstyle ':completion:*' completer _expand _complete _ignored _correct
@@ -65,3 +61,12 @@ zstyle :compinstall filename '/home/xin/.zshrc'
 
 autoload -Uz compinit
 compinit
+
+# Set EDITOR as default for plaintext stuff
+for s in txt c cc cxx cpp; do
+	alias -s $s=$EDITOR
+done
+
+source ~/.zsh.d/utils.zsh
+source ~/.zsh.d/git.zsh
+source ~/.zsh.d/sum.zsh

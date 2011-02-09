@@ -1,8 +1,18 @@
 set $modkey Mod4
 
+workspace 1 work
+workspace 2 www
+workspace 5 nethack
+workspace 8 misc
+workspace 10 music
+
+assign xconsole 8
+assign "URxvt/ncmpc" 10
+
 workspace_bar yes
 exec mozilla-firefox 2> /dev/null
 exec sh ~/.i3/scripts/i3-bar.sh
+exec urxvt -e ncmpc
 terminal /usr/local/bin/urxvt
 
 bind	$modkey+21 exec mixer vol +1
@@ -15,86 +25,61 @@ bindsym $modkey+i exec setxkbmap fr
 
 bindsym $modkey+c exec ~/.i3/scripts/calendar.sh
 
-# This configuration uses Mod1 and Mod3. Make sure they are mapped properly using xev(1)
-# and xmodmap(1). Usually, Mod1 is Alt (Alt_L) and Mod3 is Windows (Super_L)
-
 # ISO 10646 = Unicode
 font -misc-anonymous pro-medium-r-normal--13-*-*-*-*-*-iso10646-1
-#font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 
 # Use Mouse+Mod1 to drag floating windows to their wanted position
 floating_modifier Mod1
 
 # Fullscreen ($modkey+f)
-bind $modkey+41 f
+bindsym $modkey+f f
 
-# Stacking ($modkey+h)
-bind $modkey+43 s
-
+# Stacking ($modkey+s)
+bindsym $modkey+s s
 # Tabbed ($modkey+w)
-bind $modkey+25 T
+bindsym $modkey+w T
 
 # Default ($modkey+e)
-bind $modkey+26 d
+bindsym $modkey+e d
 
-# Toggle tiling/floating of the current window ($modkey+Shift+Space)
+# Toggle tiling/floating of the current window ($modkey+Space)
 bind $modkey+65 t
 
 # Go into the tiling layer / floating layer, depending on whether
-# the current window is tiling / floating ($modkey+t)
-bind $modkey+28 focus ft
+# the current window is tiling / floating ($modkey+Tab)
+bind $modkey +23 focus ft
 
-# Focus ($modkey+j/k/l/;)
-bind $modkey+44 h
-bind $modkey+45 j
-bind $modkey+46 k
-bind $modkey+47 l
-# (alternatively, you can use the cursor keys:)
-bindsym $modkey+Left h
-bindsym $modkey+Down j
-bindsym $modkey+Up k
-bindsym $modkey+Right l
+# Focus ($modkey+h/j/k/l)
+bindsym $modkey+h h
+bindsym $modkey+j j
+bindsym $modkey+k k
+bindsym $modkey+l l
 
-# Focus Container (Mod3+j/k/l/;)
-bind Mod3+44 wch
-bind Mod3+45 wcj
-bind Mod3+46 wck
-bind Mod3+47 wcl
-# (alternatively, you can use the cursor keys:)
-bindsym Mod3+Left wch
-bindsym Mod3+Down wcj
-bindsym Mod3+Up wck
-bindsym Mod3+Right wcl
+# Focus Container ($modkey+Mod1+h/j/k/l)
+bindsym $modkey+Mod1+h wch
+bindsym $modkey+Mod1+j wcj
+bindsym $modkey+Mod1+k wck
+bindsym $modkey+Mod1+l wcl
 
-# Snap ($modkey+Control+j/k/l/;)
-bind $modkey+Control+44 sh
-bind $modkey+Control+45 sj
-bind $modkey+Control+46 sk
-bind $modkey+Control+47 sl
-# (alternatively, you can use the cursor keys:)
-bindsym $modkey+Control+Left sh
-bindsym $modkey+Control+Down sj
-bindsym $modkey+Control+Up sk
-bindsym $modkey+Control+Right sl
+# Snap ($modkey+Control+h/j/k/l)
+bindsym $modkey+Control+h sh
+bindsym $modkey+Control+j sj
+bindsym $modkey+Control+k sk
+bindsym $modkey+Control+l sl
 
-# Move ($modkey+Shift+j/k/l/;)
-bind $modkey+Shift+44 mh
-bind $modkey+Shift+45 mj
-bind $modkey+Shift+46 mk
-bind $modkey+Shift+47 ml
-# (alternatively, you can use the cursor keys:)
-bindsym $modkey+Shift+Left mh
-bindsym $modkey+Shift+Down mj
-bindsym $modkey+Shift+Up mk
-bindsym $modkey+Shift+Right ml
+# Move ($modkey+Shift+h/j/k/l)
+bindsym $modkey+Shift+h mh
+bindsym $modkey+Shift+j mj
+bindsym $modkey+Shift+k mk
+bindsym $modkey+Shift+l ml
 
-# Move Container (Mod3+Shift+j/k/l/;)
-bind Mod3+Shift+44 wcmh
-bind Mod3+Shift+45 wcmj
-bind Mod3+Shift+46 wcmk
-bind Mod3+Shift+47 wcml
+# Move Container (Mod3+Shift+h/j/k/l)
+bindsym Mod3+Shift+h wcmh
+bindsym Mod3+Shift+j wcmj
+bindsym Mod3+Shift+k wcmk
+bindsym Mod3+Shift+l wcml
 
-# Workspaces ($modkey+1/2/…)
+# Workspaces ($modkey+[1-9,0])
 bind $modkey+10 1
 bind $modkey+11 2
 bind $modkey+12 3
@@ -119,52 +104,31 @@ bind $modkey+Shift+18 m9
 bind $modkey+Shift+19 m10
 
 # $modkey+Enter starts a new terminal
-#bind $modkey+36 exec /usr/X11R6/bin/xterm
 bind $modkey+36 exec /usr/local/bin/urxvt
 
 # $modkey+Shift+x kills the current client
-bind $modkey+53 kill
+bindsym $modkey+x kill
 
 # $modkey+v starts dmenu and launches the selected application
-# for now, we don’t have a launcher of our own.
-#bind $modkey+55 exec /usr/local/bin/dmenu_run
+# for now, we don't have a launcher of our own.
 bind $modkey+55 exec /usr/local/bin/dmenu_run -nb "#252525" -nf "#e3e3e3" -sb "#1e5e8a"
 
 # $modkey+Shift+e exits i3
-bind $modkey+Shift+26 exit
+bindsym $modkey+Shift+e exit
 
 # $modkey+Shift+r restarts i3 inplace
-bind $modkey+Shift+27 restart
+bindsym $modkey+Shift+r restart
 
 # The IPC interface allows programs like an external workspace bar
 # (i3-wsbar) or i3-msg (can be used to "remote-control" i3) to work.
 ipc-socket ~/.i3/ipc.sock
 
-#############################################################
-# DELETE THE FOLLOWING LINES TO DISABLE THE WELCOME MESSAGE #
-#############################################################
-#exec /usr/X11R6/bin/xmessage -file /etc/i3/welcome
-
 mode "resize" {
-        # These bindings trigger as soon as you enter the resize mode
-
-        # They resize the border in the direction you pressed, e.g.
-        # when pressing left, the window is resized so that it has
-        # more space on its left
-
-        bindsym n resize left -10
-        bindsym Shift+n resize left +10
-
-        bindsym r resize bottom +10
-        bindsym Shift+r resize bottom -10
-
-        bindsym t resize top -10
-        bindsym Shift+t resize top +10
-
-        bindsym d resize right +10
-        bindsym Shift+d resize right -10
-
-        bind 36 mode default
+        bindsym h resize left -10
+        bindsym j resize top +10
+        bindsym k resize top -10
+        bindsym l resize left +10
+        bindsym $modkey+r mode default
 }
 
 # Enter resize mode

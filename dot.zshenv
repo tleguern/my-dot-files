@@ -24,5 +24,6 @@ SAVEHIST=1000
 if [[ -o login ]]; then
 	export PS1="[%n@%m:%C][%T][%?]"
 else
-	export PS1="%F{red}[%f%U%n%u@%m:%C%F{red}][%f%T%F{red}][%f%?%F{red}]%f"
+	export PS1="%F{red}[%f%U%n%u@%m:%C%F{red}][%f%T%F{red}]%f"
+	export RPROMPT="%F{red}[%f%?%F{red}]%f"
 fi

@@ -3,9 +3,8 @@ OPTIONS=catname:Antoine, dogname:Fabien, horsename=Joe
 OPTIONS=autodig, autoquiver
 OPTIONS=lit_corridor, hilite_pet
 OPTIONS=autopickup
-OPTIONS=pickup_types:$?!/*
+OPTIONS=pickup_types:$?!/+
 OPTIONS=!cmdassist, extmenu, !prayconfirm, time, toptenwin
 name=Xin
-role=Samurai
 OPTIONS=boulder:0
 
