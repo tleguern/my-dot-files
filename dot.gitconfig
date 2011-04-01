@@ -1,0 +1,7 @@
+[user]
+	name = Aversiste
+	email = aversiste@gmail.com
+[alias]
+	ci = commit
+	br = branch
+	st = status
