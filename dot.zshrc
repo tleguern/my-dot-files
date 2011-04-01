@@ -5,6 +5,7 @@ alias df='df -h'
 alias du='du -h'
 alias ll="ls -lhF"
 alias la="ls -lhFa"
+alias ocaml="rlwrap ocaml"
 
 alias gnus='emacs -f gnus'
 
