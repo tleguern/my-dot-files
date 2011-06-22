@@ -13,6 +13,7 @@ export VISUAL=$EDITOR
 export SVN_EDITOR=$ALTERNATE_EDITOR
 export SUDO_EDITOR=$ALTERNATE_EDITOR
 export SUDO_PROMPT="[Password] "
+export LC_CTYPE=en_US.UTF-8
 
 export PKG_PATH="http://ftp.fr.openbsd.org/pub/OpenBSD/snapshots/packages/i386/"
 export CVSROOT="anoncvs@anoncvs.skyrock.com:/cvs/openbsd"
