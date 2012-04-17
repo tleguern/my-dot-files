@@ -5,5 +5,5 @@ function git-branch-name () {
 }
 
 function git-scoreboard () {
-	git log | grep Author | cut -d ' ' -f1,2 | sort | uniq -c  | sort -r
+	git log | grep Author | cut -d ' ' -f1,2 | sort | uniq -c | sort -r
 }
