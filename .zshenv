@@ -1,6 +1,6 @@
 # zsh - defaut environment
 
-export PATH=$HOME/bin:/sbin:/usr/sbin:/bin:/usr/bin:/usr/local/bin:/usr/X11R6/bin
+export PATH=$HOME/bin:/sbin:/usr/sbin:/bin:/usr/bin:/usr/X11R6/bin
 
 export PAGER=less
 
@@ -20,6 +20,6 @@ export HISTSIZE=2000
 
 export PS1="[%n@%m:%C][%T][%?]"
 
-if [[ -r .zshenv.local ]];then
-	. .zshenv.local
+if [[ -r $HOME/xin/.zshenv.local ]];then
+	. $HOME/xin/.zshenv.local
 fi

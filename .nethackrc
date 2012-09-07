@@ -5,6 +5,5 @@ OPTIONS=lit_corridor, hilite_pet
 OPTIONS=autopickup
 OPTIONS=pickup_types:$?!/+=
 OPTIONS=!cmdassist, extmenu, !prayconfirm, time, toptenwin
-name=Xin
 OPTIONS=boulder:0
 
