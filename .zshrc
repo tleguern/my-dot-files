@@ -5,19 +5,22 @@ alias ll="ls -lhF"
 alias la="ls -lhFa"
 
 # Options
-unsetopt beep
-unsetopt hist_beep
-unsetopt list_beep
-setopt auto_continue
-setopt extendedglob
-setopt auto_list
+setopt nobeep
+setopt nocorrect
+setopt nohistbeep
+setopt nolistbeep
+setopt autocontinue
+setopt autolist
 setopt multibyte
-setopt all_export
-setopt auto_cd
+setopt allexport
+setopt autocd
 
 # Modules
 autoload zcalc
 autoload ztodo
-autoload tetris
 autoload zed
-zmodload zsh/net/tcp
+
+autoload compinit
+compinit
+
+bindkey -e
