@@ -1,0 +1,9 @@
+XTerm*background:black
+XTerm*foreground:white
+
+UXTerm*background:black
+UXTerm*foreground:white
+UXTerm*utf8:2
+UXTerm*saveLines:1024
+UXTerm*scrollBar:false
+UXTerm*toolBar:false
