@@ -1,0 +1,9 @@
+config {
+	hostname anoncvs.fr.openbsd.org
+	compress
+	collection {
+		name openbsd release rcs
+		prefix $SOMEPLACE
+		umask 002
+	}
+}
