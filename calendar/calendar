@@ -2,7 +2,6 @@ LANG=C
 
 #include <calendar.birthday>
 #include <calendar.computer>
-#include <calendar.fictional>
 #include <calendar.french>
 #include <calendar.history>
 #include <calendar.holiday>
