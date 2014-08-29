@@ -17,7 +17,7 @@ alias ll='ls -lhF'
 alias df='df -h'
 alias du='du -h'
 alias minitube="usewithtor minitube"
-alias rmafrodite='rm -rf * && rm -rf *' # Suggested by Zerk
+alias rmafrodite='rm -fr * && rm -fr *' # Suggested by Zerk
 
 if [ -r $HOME/.kshenv.local ];then
 	. $HOME/.kshenv.local
