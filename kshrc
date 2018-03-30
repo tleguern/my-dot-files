@@ -2,21 +2,14 @@ PATH=$HOME/bin:/bin:/sbin:/usr/bin:/usr/sbin:/usr/X11R6/bin:/usr/local/bin:/usr/
 
 export HISTSIZE=1000
 export PAGER=less
-export SUDO_PROMPT="[Password]"
-export PRINTER=rp
 export EDITOR=vim
 export ALTERNATE_EDITOR=vi
-
 export VISUAL=$EDITOR
 export USE_EDITOR=$EDITOR
 export FCEDIT=$EDITOR
 
 export LC_CTYPE=en_US.UTF-8
 
-alias ll='ls -lhF'
-alias df='df -h'
-alias du='du -h'
-alias minitube="usewithtor minitube"
 alias rmafrodite='rm -fr * && rm -fr *' # Suggested by Zerk
 
 if [ -r $HOME/.kshenv.local ];then

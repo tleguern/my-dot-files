@@ -3,15 +3,12 @@
 color urgencyborder red
 color activeborder white
 color inactiveborder gray
-gap 0 0 0 180
+gap 0 0 0 165
 
 sticky yes
 
-command term /usr/X11R6/bin/uxterm
-
 command Firefox /usr/local/bin/firefox
 command Thunderbird /usr/local/bin/thunderbird
-command Pidgin /usr/local/bin/pidgin
 
 ignore xlock
 
