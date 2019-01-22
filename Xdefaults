@@ -3,8 +3,7 @@ XTerm*loginShell:true
 XTerm*reverseVideo:true
 XTerm*scrollBar:false
 XTerm*toolBar: false
-XTerm*faceSize: 15
+XTerm*faceSize: 14
 XTerm*faceName: DejaVu Sans Mono
-#*font: -*-dejavu sans medium-r-normal-*-22-*-*-*-*-*-*-*
-#*fontList: -*-dejavu sans medium-r-normal-*-22-*-*-*-*-*-*-*
 XClock*geometry:165x165-0-1273
+Xpdf*initialZoom: page

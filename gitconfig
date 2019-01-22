@@ -1,8 +1,10 @@
 [user]
 	name = Tristan Le Guern
 	email = tleguern@bouledef.eu
+[apply]
+	whitespace = fix
 [alias]
 	ci = commit
 	br = branch
-	h = help
 	st = status
+	lg = log --decorate --oneline --graph

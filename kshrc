@@ -11,6 +11,8 @@ export FCEDIT=$EDITOR
 export LC_CTYPE=en_US.UTF-8
 
 alias rmafrodite='rm -fr * && rm -fr *' # Suggested by Zerk
+alias fluidsynth='fluidsynth -i /usr/local/share/generaluser-gs/GeneralUser_GS.sf2'
+alias cal='cal -m'
 
 if [ -r $HOME/.kshenv.local ];then
 	. $HOME/.kshenv.local
