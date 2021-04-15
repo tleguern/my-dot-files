@@ -1,2 +1,11 @@
 VisualHostKey yes
 VerifyHostKeyDNS ask
+IdentityAgent ~/.ssh/agent.sock
+
+Host *.sr.ht
+        IdentityFile ~/.ssh/id_ed25519_srht
+        AddKeysToAgent yes
+
+Host github.com
+        IdentityFile ~/.ssh/id_ed25519_github
+        AddKeysToAgent yes

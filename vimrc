@@ -15,8 +15,8 @@ set smartindent
 set bg=dark
 set encoding=utf-8
 set laststatus=2
-set spelllang+=fr
 set spelllang=en
+set spelllang+=fr
 set t_Co=256
 set colorcolumn=81
 
