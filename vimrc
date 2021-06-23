@@ -20,6 +20,13 @@ set spelllang+=fr
 set t_Co=256
 set colorcolumn=81
 
+set nolist
+set listchars=trail:$,nbsp:⍽
+
+silent !mkdir -p ~/.vim/{backup,swp}/
+set backupdir=~/.vim/backup//
+set directory=~/.vim/swp//
+
 if has('mouse')
   set mouse=n
 endif
@@ -31,12 +38,9 @@ au BufRead,BufNewFile *.t set filetype=sh
 
 au FileType make,c,h,cpp,sh	setlocal ts=8 sw=8 noet
 au FileType python		setlocal ts=4 sw=4 et
-au FileType yaml,html		setlocal ts=2 sw=2 et
-au FileType markdown		setlocal ts=2 sw=2 et spell
+au FileType html		setlocal ts=2 sw=2 et
+au FileType yaml		setlocal ts=2 sw=2 et list
+au FileType markdown,asciidoc	setlocal ts=2 sw=2 et spell
 au FileType text		setlocal tw=80 spell
 au FileType mail		setlocal noai
-
-silent !mkdir -p ~/.vim/{backup,swp}/
-set backupdir=~/.vim/backup//
-set directory=~/.vim/swp//
-au FileType crontab setlocal bkc=yes
+au FileType crontab 		setlocal bkc=yes
