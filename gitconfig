@@ -1,14 +1,16 @@
 [user]
 	name = Tristan Le Guern
 	email = tleguern@bouledef.eu
-[apply]
-	whitespace = fix
 [alias]
 	ci = commit
 	br = branch
 	st = status
-	lg = log --decorate --oneline --graph
+	fix = commit --amend --no-edit
+[apply]
+	whitespace = fix
 [rebase]
 	autoSquash = true
 [pull]
 	rebase = true
+[push]
+	default = current
