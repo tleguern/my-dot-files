@@ -18,7 +18,7 @@ alias cal='cal -m'
 if [ -r $HOME/.kshenv.local ];then
 	. $HOME/.kshenv.local
 fi
-if [ -r $HOME/.kshenv.local ];then
+if [ -r $HOME/.kshenv.ssh ];then
 	. $HOME/.kshenv.ssh
 fi
 
