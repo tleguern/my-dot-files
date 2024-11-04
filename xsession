@@ -2,6 +2,23 @@
 
 export ENV=$HOME/.kshrc
 
+xrandr --dpi 96
+
+SCREEN_WIDTH=$(xrandr 2>&1 | grep "Screen 0: minimum" | sed -e 's/.*, current //' -e 's/ x.*//')
+if [ "$SCREEN_WIDTH" -gt 1920 ]; then
+	echo "using HIDPI"
+	export HIDPI=1
+	export GDK_SCALE=1.3
+	export GDK_DPI_SCALE=1.3
+	export QT_SCALE_FACTOR=1.3
+	xrdb -DHIDPI=1 -DHOME=$HOME < ~/.Xdefaults
+else
+	xrdb -DHOME=$HOME < ~/.Xdefaults
+fi
+
+# Remove core dumps
+ulimit -Sc 0
+
 # Simple config
 xsetroot -solid black
 xset -b
