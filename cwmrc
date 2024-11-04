@@ -1,7 +1,7 @@
 # tleguern cwmrc
 
 sticky yes
-snapdist 20
+snapdist 15
 
 command Firefox /usr/local/bin/firefox
 command Thunderbird /usr/local/bin/thunderbird
@@ -10,9 +10,8 @@ command Xterm /usr/X11R6/bin/xterm
 ignore xclock
 ignore xconsole
 
-autogroup 1 "gajim.Gajim"
-autogroup 1 "Mail.Thunderbird"
-autogroup 2 "Navigator.Firefox"
+autogroup 1 Navigator,Firefox
+autogroup 2 Mail,thunderbird
 
 bind-key CM-1 group-only-1
 bind-key CM-2 group-only-2
@@ -20,11 +19,15 @@ bind-key CM-3 group-only-3
 bind-key MS-1 window-movetogroup-1
 bind-key MS-2 window-movetogroup-2
 bind-key MS-3 window-movetogroup-3
-bind-key M-v window-vtile
+bind-key 4-v window-vtile
+bind-key 4-h window-htile
+bind-key 4-Up window-snap-up
+bind-key 4-Down window-snap-down
+bind-key 4-Right window-snap-right
+bind-key 4-Left window-snap-left
 
 color urgencyborder red
 color activeborder white
 color inactiveborder gray
-gap 0 0 0 20
-
-
+gap 0 0 0 15
+borderwidth 1
