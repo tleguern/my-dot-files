@@ -1,26 +1,25 @@
-set nocompatible
-set nofoldenable
-set nospell
 
 set autoindent
+set backspace=indent,eol
+set bg=dark
+set encoding=utf-8
 set hlsearch
 set ignorecase
 set incsearch
+set laststatus=2
+set listchars=trail:$,nbsp:⍽
+set nocompatible
+set nofoldenable
+set nolist
+set nospell
 set ruler
 set showcmd
 set showmatch
 set showmode
 set smartindent
-
-set bg=dark
-set encoding=utf-8
-set laststatus=2
 set spelllang=en
 set spelllang+=fr
 set t_Co=256
-
-set nolist
-set listchars=trail:$,nbsp:⍽
 
 silent !mkdir -p ~/.vim/{backup,swp}/
 set backupdir=~/.vim/backup//
