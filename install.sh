@@ -18,8 +18,10 @@ mkdir -p ~/.ssh
 
 case "$(uname -s)" in
 	OpenBSD)
-		cp -r calendar ~/.calendar
-		cp -r config ~/.config
+		mkdir -p ~/.calendar
+		cp calendar/calendar ~/.calendar/
+		mkdir -p ~/.config
+		cp config/user-dirs.dirs ~/.config/user-dirs.dirs
 		careful cwmrc
 		if [ ! -f ~/.ssh/local ]; then
 			echo 'IdentityAgent ~/.ssh/agent.sock' > ~/.ssh/local
@@ -42,6 +44,9 @@ case "$(uname -s)" in
 	*) echo "Hu?"; exit 1;;
 esac
 
+if [ ! -f ~/.gitconfig.local ]; then
+	touch ~/.gitconfig.local
+fi
 careful gitconfig
 careful kshrc
 cp nethackrc ~/.nethackrc
