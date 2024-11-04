@@ -3,12 +3,12 @@
 careful() {
 	file="$1"; shift
 
-	if ! diff -q "$file" ~/."$file"; then
-		diff -u "$file" ~/."$file"
+	if ! diff -q ~/."$file" "$file"; then
+		diff -up ~/."$file" "$file"
 		echo -n "Replace ? "
 		read REPLY
 		case "$REPLY" in
-		Y) cp "$file" ~/."$file";;
+		y|Y|yes) cp "$file" ~/."$file";;
 		*) .;;
 		esac
 	fi
