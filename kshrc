@@ -11,15 +11,20 @@ export FCEDIT=$EDITOR
 
 export LC_CTYPE=en_US.UTF-8
 
+export ANSIBLE_CACHE_PLUGIN_CONNECTION=~/.ansible_facts
+
 alias rmafrodite='rm -fr * && rm -fr *' # Suggested by Zerk
 alias fluidsynth='fluidsynth -i /usr/local/share/generaluser-gs/GeneralUser_GS.sf2'
 alias cal='cal -m'
 
-if [ -r $HOME/.kshenv.local ];then
-	. $HOME/.kshenv.local
-fi
-if [ -r $HOME/.kshenv.ssh ];then
+set -o vi
+
+if [ -r $HOME/.kshenv.ssh ]; then
 	. $HOME/.kshenv.ssh
+fi
+
+if [ -r $HOME/.kshenv.local ]; then
+	. $HOME/.kshenv.local
 fi
 
 /usr/games/fortune -o -s

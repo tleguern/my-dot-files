@@ -1,0 +1,5 @@
+if [ ! -r "$HOME/.kshenv.ssh" ]; then
+	ssh-agent | head -n 2 > "$HOME/.kshenv.ssh"
+fi
+
+. ~/.kshrc
