@@ -36,7 +36,6 @@ case "$(uname -s)" in
 		if [ ! -f ~/.ssh/local ]; then
 			touch ~/.ssh/local
 		fi
-		chmod -w ~/.mkshrc
 		rm -f .bash_history
 		rm -f .bash_logout
 		rm -f .bashrc
@@ -52,6 +51,3 @@ careful kshrc
 cp nethackrc ~/.nethackrc
 cp ssh/config ~/.ssh/
 careful vimrc
-
-chmod -w ~/.ssh/config
-chmod -w ~/.kshrc
