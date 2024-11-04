@@ -1,9 +1,23 @@
 ! $OpenBSD: dot.Xdefaults,v 1.3 2014/07/10 10:22:59 jasper Exp $
+
+Xcursor.theme:	dmz
+Xcursor.size:	60
+
+XTerm.vt100.faceName:  monospace:size=12
+
+#ifdef HIDPI
+SshAskpass*Button.font:  -*-lucida-medium-r-*-*-24-*-*-*-*-*-*-*
+SshAskpass*Dialog.font:  -*-lucida-medium-r-*-*-26-*-*-*-*-*-*-*
+SshAskpass*Indicator.width: 30
+SshAskpass*Indicator.height: 15
+#endif
+
+XTerm*eightBitInput: true
 XTerm*loginShell:true
 XTerm*reverseVideo:true
 XTerm*scrollBar:false
 XTerm*toolBar: false
-XTerm*faceSize: 14
-XTerm*faceName: DejaVu Sans Mono
+XTerm*saveLines: 20000
+XTerm*visualBell: false
+XTerm*allowMouseOps: true
 XClock*geometry:165x165-0-1273
-Xpdf*initialZoom: page
