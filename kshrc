@@ -17,6 +17,25 @@ alias rmafrodite='rm -fr * && rm -fr *' # Suggested by Zerk
 alias fluidsynth='fluidsynth -i /usr/local/share/generaluser-gs/GeneralUser_GS.sf2'
 alias cal='cal -m'
 
+forever() {
+	while true; do
+		$@
+		sleep 1
+	done
+}
+
+d20() {
+	echo $(( $RANDOM % 20 + 1))
+}
+
+d6() {
+	echo $(( $RANDOM % 6 + 1))
+}
+
+d66() {
+	echo $(d6) $(d6)
+}
+
 set -o vi
 
 if [ -r $HOME/.kshenv.ssh ]; then
