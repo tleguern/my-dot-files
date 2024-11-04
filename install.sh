@@ -26,7 +26,6 @@ case "$(uname -s)" in
 		fi
 		careful wsconsctl.conf
 		careful Xdefaults
-		careful xinitrc
 		careful xpdfrc
 		careful xsession
 	;;
