@@ -1,9 +1,6 @@
 LANG=C
 
-#include <calendar.birthday>
 #include <calendar.computer>
-#include <calendar.french>
 #include <calendar.history>
-#include <calendar.holiday>
-#include <calendar.openbsd>
-#include <calendar.pagan>
+#include <fr_FR.UTF-8/calendar.jferies>
+#include <fr_FR.UTF-8/calendar.proverbes>
